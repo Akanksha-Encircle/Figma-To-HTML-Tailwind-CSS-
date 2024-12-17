@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-icon i,
+.nav-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.bg-extension-gradient {
+    background: linear-gradient(90deg, #979899 36.87%, rgba(151, 152, 153, 0) 60.75%), url('../images/extension-bg.png'), #979899;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
