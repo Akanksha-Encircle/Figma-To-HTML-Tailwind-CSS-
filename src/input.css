@@ -4,10 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
-.nav-icon i,
-.nav-icon svg {
-    width: 24px;
-    height: 24px;
+@layer utilities {
+
+    .nav-icon i,
+    .nav-icon svg {
+        @apply w-[24px] h-[24px];
+    }
+
+    .overflow-hidden {
+        @apply overflow-hidden;
+    }
+
+    .bg-white-90 {
+        @apply bg-white opacity-90;
+    }
+
+    .bg-join {
+        @apply bg-[#CECECE] opacity-60;
+    }
+
 }
 
 .bg-extension-gradient {
@@ -17,6 +32,81 @@
     background-size: cover;
 }
 
-.overflow-hidden {
-    overflow: hidden;
+.flex-basis-3 {
+    flex-basis: calc((100% - 80px) / 3);
+}
+
+.bg-white-80 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.bg-white-20 {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.swiper-arrow {
+    width: 40px !important;
+    height: 40px !important;
+    margin-top: 0 !important;
+}
+
+.swiper-arrow:hover {
+    opacity: 0.5 !important;
+}
+
+.swiper-button-prev {
+    left: 0 !important;
+}
+
+.swiper-button-next {
+    right: 0 !important;
+}
+
+.swiper-arrow:after {
+    content: none !important;
+}
+
+.swiper-slide {
+    height: auto !important;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+.flex-basis-3 {
+    flex-basis: calc((100% - 40px) / 2);
+}
+
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+
+.flex-basis-3 {
+    flex-basis: calc((100% - 40px) / 2);
+}
+
+}
+
+@media (min-width: 400px) and (max-width: 659px) {
+
+.flex-basis-3 {
+    flex-basis: calc((100% - 40px) / 2);
+}
+
+}
+
+@media (max-width: 640px) {
+
+.swiper-arrow {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+}
+
+@media (max-width: 400px) {
+
+.flex-basis-3 {
+    flex-basis: 100%;
+}
+
 }

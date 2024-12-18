@@ -26,6 +26,32 @@
             $("html").removeClass("overflow-hidden");
         });
 
+		var swiper = new Swiper(".styleSwiper", {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			loop: true,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			breakpoints: {
+				500: {
+				  slidesPerView: 2,
+				  spaceBetween: 20,
+				},
+				1024: {
+				  slidesPerView: 3,
+				  spaceBetween: 20,
+				},
+				1280: {
+				  slidesPerView: 4,
+				  spaceBetween: 20,
+				},
+			},
+		});
+
+		AOS.init();
+
 		/* lazyload */
 		var myLazyLoad = new LazyLoad();
 		myLazyLoad.update();
